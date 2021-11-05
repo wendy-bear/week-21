@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .regform {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .regform_wrapper {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-flow: column nowrap;
+            border-radius: 10px;
+            border: 15px solid #8FBC8F;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input,
+        label {
+            margin: 5px;
+        }
+
+        input:required:valid {
+            border-color: green;
+        }
+
+
+        button {
+            width: 150px;
+            height: 30px;
+            background-color: #8FBC8F;
+            margin: 20px;
+            font-size: medium;
+        }
+
+        .regform_button {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .errors {
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="regform">
+        <div class="regform_wrapper">
+            <h1>Создание аккаунта</h1>
+            <form>
+                <div class="regform_name">
+                    <label for="name">Имя:</label>
+                    <input type="text" placeholder="Имя" id="name" value="" class="filled" required>
+                    <br>
+
+                    <label for="surname">Фамилия:</label>
+                    <input type="text" placeholder="Фамилия" id="surname" value="" class="filled" required>
+                    <br>
+
+                    <label for="day">Дата рождения:</label>
+                    <input type="number" placeholder="День" id="day" min="1" max="31" value="" required>
+                    <br>
+
+                    <input type="number" placeholder="Месяц (цифрами)" id="month" min="1" max="12" value="" required>
+                    <br>
+
+                    <input type="number" placeholder="Год рождения" id="year" min="1928" max="2000" value="" required>
+                    <br>
+
+                    <label>
+                        Ваш пол
+                        <input type="radio" name="g" id="woman" value="Женский">Женский
+                        <input type="radio" name="g" id="man" value="Мужской">Мужской
+                    </label><br>
+
+                    <label for="email">Ваш email:</label>
+                    <input type="email" id="email" placeholder="Email" value="" required>
+                    <br>
+
+                    <label for="password">Придумайте пароль:</label>
+                    <input type="password" id="password" placeholder="Пароль" value="" minlength="8" required>
+                    <br>
+
+                    <label for="password_repeat">Повторите пароль:</label>
+                    <input type="password" id="password_repeat" placeholder="Повтор пароля" value="" minlength="8" required>
+                    <br>
+
+                    <div class="errors" id="error_all"></div>
+
+                    <div class="regform_button">
+                        <button type="submit" id="regButton">Отправить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="form.js"></script>
+</body>
+
+</html>
