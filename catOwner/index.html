@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросник для котовладельцев</title>
+</head>
+
+<body>
+    <h1>Анкета-опросник</h1>
+    <form method="post" action="https://httpbin.org/post" id="catForm">
+        <label for="nickname">
+            1. Кличка питомца: <br></label>
+        <input type="text" id="nickname" placeholder="Кличка питомца" name="Кличка" value="" required><br>
+
+        <label for="age">
+            2. Возраст: <br></label>
+        <input type="text" id="age" placeholder="Возраст" value="" name="Возраст" required><br>
+
+        <label for="breed">
+            3. Порода питомца: <br>
+            <select id="breed" name="Порода">
+                <option value="Абиссинская кошка">Абиссинская кошка</option>
+                <option value="Бенгальская кошка">Бенгальская кошка</option>
+                <option value="Беспородная">Беспородная</option>
+                <option value="Британская короткошерстная">Британская короткошерстная</option>
+                <option value="Манчкин">Манчкин</option>
+            </select><br>
+        </label>
+        <label for="dryfood">
+            4. Чем питается: <br>
+            <input type="checkbox" id="dryfood" name="Корм" value="Сухой корм"></label>
+        Сухой корм<br>
+        <label for="wetfood">
+            <input type="checkbox" id="wetfood" name="Корм" value="Влажный корм"></label>
+        Влажный корм <br>
+        <label for="naturalfood">
+            <input type="checkbox" id="naturalfood" name="Корм" value="Натуральный корм"></label>
+        Натуральный корм<br>
+
+        <label for="cat">
+            5. Пол питомца: <br>
+            <input type="radio" name="Пол" id="cat" value="Самец">Самец</label>
+        <label for="shecat"><input type="radio" name="Пол" id="shecat" value="Самка">Самка
+        </label><br>
+        <label>
+            6. Комментарий владельца: <br>
+            <textarea id="textarea" rows="8" cols="55" name="Комментарий владельца"></textarea> <br>
+        </label>
+
+        <button type="submit" id="submit">Отправить анкету</button>
+    </form>
+
+    <script src="cat.js"></script>
+</body>
+
+</html>
